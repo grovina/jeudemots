@@ -19,7 +19,7 @@ if len(sys.argv) > 3:
 # Words
 with open(LANG + ".txt", "br") as file:
     lines = np.random.choice(file.readlines(), SIZE * SIZE, replace=False)
-    words = list(line.decode('latin-1').strip() for line in lines)
+    words = list(line.decode("latin-1").strip() for line in lines)
 
 # Areas
 seq = 1 + np.array(range(SIZE * SIZE)) % (TEAMS + 1)
