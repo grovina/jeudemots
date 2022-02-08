@@ -42,6 +42,7 @@ plt.savefig("public.png")
 
 plt.imshow(np.transpose(seq), cmap="gist_ncar", interpolation="none")
 plt.setp(death_word, color="w")
-plt.title("Orange %s." % ("commence" if LANG == "fr" else "starts"))
+cmap = plt.get_cmap('gist_ncar')
+plt.title("Vous commencez" if LANG == "fr" else "You start", color = cmap(int(2*256/(TEAMS+1))))
 plt.savefig("secret.png")
 plt.close()
